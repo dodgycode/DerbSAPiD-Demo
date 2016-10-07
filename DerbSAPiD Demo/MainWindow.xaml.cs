@@ -24,5 +24,10 @@ namespace DerbSAPiD_Demo
         {
             InitializeComponent();
         }
+
+        private void GoButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

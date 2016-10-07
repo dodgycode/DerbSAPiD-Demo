@@ -1,12 +1,119 @@
 ﻿<Window x:Class="DerbSAPiD_Demo.MainWindow"
+        Icon="favicon2.ico"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DerbSAPiD_Demo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="DerbySAPiD" Height="230" Width="525">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0"
+               Grid.Row="0">
+            RRN:
+        </Label>
+        <TextBox Grid.Column="1"
+                 Grid.Row="0"
+                 Width="150"
+                 Height="20"
+                 Name="RRNText"/>
+
+        <Button Name="GoButton"
+                Grid.Column="0"
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Click="GoButton_Click"
+                Background="Green"
+                Foreground="White"
+                Margin="10">
+            Go get the info!
+        </Button>
+
+        <Label Grid.Column="0"
+               Grid.Row="2">
+            Assessor Name:
+        </Label>
+        <TextBox Grid.Column="1"
+                 Grid.Row="2"
+                 Width="150"
+                 Height="20"
+                 Name="AssessorNameText"
+                 IsEnabled="False"/>
+
+        <Label Grid.Column="0"
+               Grid.Row="3">
+            Assessor Number:
+        </Label>
+        <TextBox Grid.Column="1"
+                 Grid.Row="3"
+                 Width="150"
+                 Height="20"
+                 Name="AssessorNumberText"
+                 IsEnabled="False"/>
+
+        <Label Grid.Column="0"
+               Grid.Row="4">
+            Street Address:
+        </Label>
+        <TextBox Grid.Column="1"
+                 Grid.Row="4"
+                 Width="150"
+                 Height="20"
+                 Name="StreetNameText"
+                 IsEnabled="False"/>
+
+        <Label Grid.Column="0"
+               Grid.Row="5">
+            City:
+        </Label>
+        <TextBox Grid.Column="1"
+                 Grid.Row="5"
+                 Width="150"
+                 Height="20"
+                 Name="CityText"
+                 IsEnabled="False"/>
+
+        <Label Grid.Column="0"
+               Grid.Row="6">
+            Postcode:
+        </Label>
+        <TextBox Grid.Column="1"
+                 Grid.Row="6"
+                 Width="150"
+                 Height="20"
+                 Name="PostcodeText"
+                 IsEnabled="False"/>
+
+        <Border Grid.Column="2"
+               Grid.RowSpan="6"
+               Background="Black"
+                HorizontalAlignment="Center"
+                   Margin="10">
+            <Image Name="PictureBox"
+               Width="230"/>
+        </Border>
+
+        <ComboBox 
+          Name="FileListBox"
+          Grid.Column="2"
+          Grid.Row="6"/>
+
+        
         
     </Grid>
 </Window>
